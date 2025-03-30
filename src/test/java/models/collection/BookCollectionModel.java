@@ -6,4 +6,8 @@ import lombok.Data;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
 public class BookCollectionModel {
+
+    int id;
+    String name;
+    String url;
 }

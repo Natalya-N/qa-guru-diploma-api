@@ -10,5 +10,9 @@ public class Constants {
     public static final String LOGIN_AVAILABLE_PATH = "/foundation/api/auth/login-available";
     public static final String REMOVE = "/remove";
     public static final String ADD = "/add";
+    public static final String LIMIT = "limit";
+    public static final String OFFSET = "offset";
+
+    public static final int BOOKS_COUNT = 9150;
 
 }

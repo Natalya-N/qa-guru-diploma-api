@@ -49,7 +49,7 @@ public class AuthorApi {
         return response;
     }
 
-    @Step("Проверить поялвение ошибки при запросе несуществующего автора")
+    @Step("Проверить появление ошибки при запросе несуществующего автора")
     public void checkNonExistedAuthorError(NonExistedAuthorResponseErrorModel response) {
         assertEquals(response.getError().getType(), "ResourceNotFoundByID");
         assertEquals(response.getError().getTitle(), "Resource not found");
