@@ -1,0 +1,18 @@
+{
+  "base": {
+    "project": "qa-guru",
+    "environment": "qa-guru env",
+    "comment": "qa-guru comm",
+    "reportLink": "",
+    "language": "ru",
+    "allureFolder": "build/allure-report/",
+    "enableChart": true,
+    "enableSuitesPublishing": true,
+    "customData": {}
+  },
+  "telegram": {
+    "token": "7880378833:AAE253A_kmivZYG46jGtzAZ_SaI0au0XL64",
+    "chat": "-4711337100",
+    "replyTo": ""
+  }
+}
