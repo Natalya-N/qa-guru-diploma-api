@@ -2,12 +2,14 @@ package models.cart;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
+import models.collection.PaginationModel;
+
+import java.util.List;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
-public class CartResponseModel {
+public class CartPayloadModel {
 
-    int status;
-    String error;
-    CartPayloadModel payload;
+    CartModel data;
+
 }
