@@ -1,7 +1,6 @@
 package api;
 
 import io.qameta.allure.Step;
-import models.author.AuthorResponseModel;
 import models.cart.CartModelRequest;
 import models.cart.CartResponseModel;
 
@@ -19,7 +18,6 @@ public class CartApi {
 
     @Step("Добавить книгу в корзину")
     public CartResponseModel addBookToCart(int id) {
-
         List<Integer> books = new ArrayList<>();
         books.add(id);
         CartModelRequest request  = new CartModelRequest();
@@ -46,7 +44,6 @@ public class CartApi {
 
     @Step("Удалить книгу из корзины")
     public void deleteBookFromCart(int id) {
-
         List<Integer> books = new ArrayList<>();
         books.add(id);
         CartModelRequest request  = new CartModelRequest();

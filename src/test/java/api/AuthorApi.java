@@ -15,7 +15,6 @@ public class AuthorApi {
 
     @Step("Запросить профиль автора")
     public AuthorResponseModel getAuthorProfile(String name) {
-
         AuthorResponseModel response =
                 given(requestSpec)
                         .when()
@@ -38,7 +37,6 @@ public class AuthorApi {
 
     @Step("Запросить профиль несуществующего автора")
     public NonExistedAuthorResponseErrorModel getAuthorNonExistedProfile() {
-
         NonExistedAuthorResponseErrorModel response =
                 given(requestSpec)
                         .when()

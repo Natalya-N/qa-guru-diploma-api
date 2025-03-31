@@ -15,7 +15,6 @@ public class CollectionsApi {
 
     @Step("Получить коллекцию книг")
     public BooksCollectionsResponseModel getBooksCollections(int limit, int offset) {
-
         BooksCollectionsResponseModel response =
         given(requestSpec)
                 .when()
@@ -32,7 +31,6 @@ public class CollectionsApi {
     @Step("Проверить коллекцию книг")
     public void checkBooksCollections(BooksCollectionsResponseModel response,
                                       int index, int id, String name, String url) {
-
         assertNull(response.getError());
         assertEquals(response.getStatus(), 200);
         assertEquals(response.getPayload().getCounters().getAll(), BOOKS_COUNT);

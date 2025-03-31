@@ -14,7 +14,6 @@ public class CartTests extends TestBase {
     })
     @ParameterizedTest(name = "Добавить книгу с id {1} в корзину")
     public void addBookToCartTest(String id) {
-
         CartResponseModel response = cartApi.addBookToCart(parseInt(id));
         cartApi.checkCart(response, parseInt(id));
     }
