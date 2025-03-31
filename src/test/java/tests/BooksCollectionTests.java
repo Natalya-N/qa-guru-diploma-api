@@ -1,14 +1,10 @@
 package tests;
 
-import jdk.jfr.Description;
 import models.collection.BooksCollectionsResponseModel;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNull;
 
 
 public class BooksCollectionTests extends TestBase {
@@ -29,6 +25,7 @@ public class BooksCollectionTests extends TestBase {
         BooksCollectionsResponseModel response1 = collectionsApi.getBooksCollections(5, 0);
         collectionsApi.checkBooksCollectionPagination(response1, 5, 0);
         BooksCollectionsResponseModel response2 = collectionsApi.getBooksCollections(5, 5);
+        collectionsApi.checkBooksCollectionPagination(response2, 5, 5);
     }
 
 }

@@ -45,6 +45,7 @@ public class CollectionsApi {
     @Step("Проверить пагинацию в выдаче коллекций книг")
     public void checkBooksCollectionPagination(BooksCollectionsResponseModel response, int limit, int offset) {
         int nextOffset = offset + 5;
+        int previousOffset = offset - 5;
         assertNull(response.getError());
         assertEquals(response.getStatus(), 200);
         assertEquals(response.getPayload().getCounters().getAll(), BOOKS_COUNT);
@@ -52,7 +53,7 @@ public class CollectionsApi {
         if (offset == 0)  {
             assertNull(response.getPayload().getPagination().getPreviousPage());
         } else {
-            assertEquals(response.getPayload().getPagination().getNextPage(), "/api/collections?limit=" + limit + "&offset=" + offset);
+            assertEquals(response.getPayload().getPagination().getPreviousPage(), "/api/collections?limit=" + limit + "&offset=" + previousOffset);
         };
     }
 
