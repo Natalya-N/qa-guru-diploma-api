@@ -15,7 +15,7 @@ public class BooksCollectionTests extends TestBase {
     @ParameterizedTest(name = "Проверка коллекций книг: " +
             "Для каждой коллекции должны возвращаться идентификатор {2}, " +
             "Название {3} и url {4}")
-    void getBooksCollectionTest(int index, int id, String name, String url, int count) {
+    void getBooksCollectionTest(int index, int id, String name, String url) {
         BooksCollectionsResponseModel response = collectionsApi.getBooksCollections(3, 0);
         collectionsApi.checkBooksCollections(response, index, id, name, url);
 
