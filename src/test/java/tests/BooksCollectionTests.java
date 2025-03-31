@@ -11,7 +11,7 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 @Tag("simple")
 public class BooksCollectionTests extends TestBase {
 
-    @CsvFileSource(resources = "/booksCollection.csv")
+    @CsvFileSource(resources = "/bookCollection.csv")
     @ParameterizedTest(name = "Проверка коллекций книг: " +
             "Для каждой коллекции должны возвращаться идентификатор {2}, " +
             "Название {3} и url {4}")
