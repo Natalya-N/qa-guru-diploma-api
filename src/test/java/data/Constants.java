@@ -7,6 +7,6 @@ public class Constants {
     public static final String CART_PATH = "/foundation/api/cart/arts";
     public static final String REMOVE = "/remove";
     public static final String ADD = "/add";
-    public static final int BOOKS_COUNT = 9153;
+    public static final int BOOKS_COUNT = 9155;
 
 }
