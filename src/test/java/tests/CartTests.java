@@ -1,11 +1,13 @@
 package tests;
 
 import models.cart.CartResponseModel;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import static java.lang.Integer.parseInt;
 
+@Tag("simple")
 public class CartTests extends TestBase {
 
     @ValueSource(strings = {

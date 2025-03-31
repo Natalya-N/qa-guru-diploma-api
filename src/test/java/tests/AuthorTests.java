@@ -3,10 +3,12 @@ package tests;
 import models.author.AuthorResponseModel;
 import models.author.NonExistedAuthorResponseErrorModel;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
+@Tag("simple")
 public class AuthorTests extends TestBase {
 
     @CsvFileSource(resources = "/authorsList.csv")
