@@ -26,36 +26,29 @@
 
 
 ## :white_check_mark: Реализованные проверки:
-Проверки получения профиля автора
-Проверки получения коллекций книг
-Проверка добавления книги в корзину
+Проверки получения профиля автора  
+Проверки получения коллекций книг  
+Проверка добавления книги в корзину  
 
 
 ## :arrow_forward: Сборка в Jenkins:
-Перейти по [ссылке](https://jenkins.autotests.cloud/job/C32-nechaevanatalya-diploma-api/)
+Перейти по [ссылке](https://jenkins.autotests.cloud/job/C32-nechaevanatalya-diploma--api/)
 
 Для запуска сборки необходимо кликнуть на "Build with parameters"
 
-<img width="1419" alt="Снимок экрана 2025-03-08 в 16 11 55" src="https://github.com/user-attachments/assets/b80106e8-612a-4334-a594-a9832857f550" />
-
-
-## :label: Параметры сборки в Jenkins:
-browser (браузер, по умолчанию chrome)  
-browserVersion (версия браузера, по умолчанию 122)  
-browserSize (размер окна браузера, по умолчанию 1920x1080)
+<img width="1050" alt="Снимок экрана 2025-03-31 в 17 44 55" src="https://github.com/user-attachments/assets/6101ef00-1c38-4d4e-ba2e-1ab135d2cc96" />
 
 ## :bar_chart: Пример Allure отчета:
 
-Для просмотра перейти по [ссылке]()
-
-<img width="1421" alt="Снимок экрана 2025-03-09 в 23 11 52" src="https://github.com/user-attachments/assets/ef77a9b0-84c7-4436-bff5-082381601c56" />
+<img width="1282" alt="Снимок экрана 2025-03-31 в 17 47 49" src="https://github.com/user-attachments/assets/56669639-b75b-460c-9924-083a11f30090" />
 
 
 Результат выполнения тестов:
-<img width="1435" alt="Снимок экрана 2025-03-09 в 23 12 14" src="https://github.com/user-attachments/assets/cb387226-2ab7-44bd-994e-1b89f89bb961" />
+<img width="1289" alt="Снимок экрана 2025-03-31 в 17 47 01" src="https://github.com/user-attachments/assets/3a159be9-c293-4ca6-940a-e906d5dfd7f9" />
+
 
 
 ## :bell: Уведомления в Telegram с использованием бота:
 После завершения сборки Telegram-бот автоматически обрабатывает и отправляет сообщение с отчетом о прогоне тестов
 
-<img width="436" alt="Снимок экрана 2025-03-09 в 23 10 04" src="https://github.com/user-attachments/assets/49f9405e-51bb-4f47-bc6f-006ccddcbeca" />
+<img width="379" alt="Снимок экрана 2025-03-31 в 17 45 57" src="https://github.com/user-attachments/assets/ffc94357-63ba-44f0-a984-00f19915cff7" />
