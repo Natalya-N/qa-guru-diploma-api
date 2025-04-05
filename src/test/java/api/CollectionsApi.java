@@ -1,7 +1,7 @@
 package api;
 
 import io.qameta.allure.Step;
-import models.collection.BooksCollectionsResponseModel;
+import models.book.BooksCollectionsResponseModel;
 
 import static data.Constants.BOOKS_COLLECTIONS_PATH;
 import static data.Constants.BOOKS_COUNT;
@@ -52,7 +52,7 @@ public class CollectionsApi {
             assertNull(response.getPayload().getPagination().getPreviousPage());
         } else {
             assertEquals(response.getPayload().getPagination().getPreviousPage(), "/api/collections?limit=" + limit + "&offset=" + previousOffset);
-        };
+        }
     }
 
 }

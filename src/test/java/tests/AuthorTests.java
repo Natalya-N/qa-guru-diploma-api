@@ -1,5 +1,7 @@
 package tests;
 
+import io.qameta.allure.Epic;
+import io.qameta.allure.Story;
 import models.author.AuthorResponseModel;
 import models.author.NonExistedAuthorResponseErrorModel;
 import org.junit.jupiter.api.DisplayName;
@@ -8,9 +10,11 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
-@Tag("simple")
+@Epic("Профиль автора")
+@Tag("regress")
 public class AuthorTests extends TestBase {
 
+    @Story("Получение информации о профиле автора")
     @CsvFileSource(resources = "/authorsList.csv")
     @ParameterizedTest(name = "Проверка профиля автора: " +
             "Для каждого автора должны возвращаться имя и фамилия: {2}, " +
@@ -20,6 +24,7 @@ public class AuthorTests extends TestBase {
         authorApi.checkAuthorProfile(response, name, followers, interviews);
     }
 
+    @Story("Получение информации о профиле автора")
     @Test
     @DisplayName("Проверка ошибки при запросе несуществующего автора")
     void getNonExistedAuthorTest() {

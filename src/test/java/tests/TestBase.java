@@ -3,6 +3,7 @@ package tests;
 import api.AuthorApi;
 import api.CartApi;
 import api.CollectionsApi;
+import api.FavoritesApi;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
 import io.restassured.RestAssured;
@@ -14,6 +15,7 @@ public class TestBase {
     protected final CollectionsApi collectionsApi = new CollectionsApi();
     protected final AuthorApi authorApi = new AuthorApi();
     protected final CartApi cartApi = new CartApi();
+    protected final FavoritesApi favoritesApi = new FavoritesApi();
 
     @BeforeAll
     static void setup() {

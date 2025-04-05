@@ -1,12 +1,15 @@
-package models.cart;
+package models.favorite;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
+
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
-public class CartPayloadModel {
+public class BookFavoriteModel {
 
-    CartModel data;
+    int id;
+    String title;
+    String url;
 
 }

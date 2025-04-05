@@ -1,4 +1,4 @@
-package models.collection;
+package models.book;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
@@ -11,6 +11,6 @@ public class BooksCollectionsPayloadModel {
 
     CountersModel counters;
     PaginationModel pagination;
-    List<BookCollectionModel> data;
+    List<BookModel> data;
 
 }

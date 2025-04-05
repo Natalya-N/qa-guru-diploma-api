@@ -1,16 +1,19 @@
 package tests;
 
-import models.collection.BooksCollectionsResponseModel;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Story;
+import models.book.BooksCollectionsResponseModel;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
-
-@Tag("simple")
+@Epic("Коллекции книг")
+@Tag("regress")
 public class BooksCollectionTests extends TestBase {
 
+    @Story("Получение коллекции книг")
     @CsvFileSource(resources = "/bookCollection.csv")
     @ParameterizedTest(name = "Проверка коллекций книг: " +
             "Для каждой коллекции должны возвращаться идентификатор {2}, " +
@@ -21,6 +24,7 @@ public class BooksCollectionTests extends TestBase {
 
     }
 
+    @Story("Получение коллекции книг")
     @Test
     @DisplayName("Проверка пагинации при получении коллекций книг")
     void getBooksCollectionPaginationTest() {
