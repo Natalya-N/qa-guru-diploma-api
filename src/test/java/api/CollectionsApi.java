@@ -32,11 +32,11 @@ public class CollectionsApi {
     public void checkBooksCollections(BooksCollectionsResponseModel response,
                                       int index, int id, String name, String url) {
         assertNull(response.getError());
-        assertEquals(response.getStatus(), 200);
-        assertEquals(response.getPayload().getCounters().getAll(), BOOKS_COUNT);
-        assertEquals(response.getPayload().getData().get(index).getId(), id);
-        assertEquals(response.getPayload().getData().get(index).getName(), name);
-        assertEquals(response.getPayload().getData().get(index).getUrl(), url);
+        assertEquals(200, response.getStatus());
+        assertEquals(BOOKS_COUNT, response.getPayload().getCounters().getAll());
+        assertEquals(id, response.getPayload().getData().get(index).getId());
+        assertEquals(name, response.getPayload().getData().get(index).getName());
+        assertEquals(url, response.getPayload().getData().get(index).getUrl());
 
     }
 
@@ -45,13 +45,13 @@ public class CollectionsApi {
         int nextOffset = offset + 5;
         int previousOffset = offset - 5;
         assertNull(response.getError());
-        assertEquals(response.getStatus(), 200);
-        assertEquals(response.getPayload().getCounters().getAll(), BOOKS_COUNT);
-        assertEquals(response.getPayload().getPagination().getNextPage() , "/api/collections?limit=" + limit + "&offset=" + nextOffset);
+        assertEquals(200, response.getStatus());
+        assertEquals(BOOKS_COUNT, response.getPayload().getCounters().getAll());
+        assertEquals("/api/collections?limit=" + limit + "&offset=" + nextOffset, response.getPayload().getPagination().getNextPage());
         if (offset == 0)  {
             assertNull(response.getPayload().getPagination().getPreviousPage());
         } else {
-            assertEquals(response.getPayload().getPagination().getPreviousPage(), "/api/collections?limit=" + limit + "&offset=" + previousOffset);
+            assertEquals("/api/collections?limit=" + limit + "&offset=" + previousOffset, response.getPayload().getPagination().getPreviousPage());
         }
     }
 

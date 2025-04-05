@@ -37,8 +37,8 @@ public class CartApi {
         List<Integer> books = new ArrayList<>();
         books.add(id);
         assertNull(response.getError());
-        assertEquals(response.getStatus(), 200);
-        assertEquals(response.getPayload().getData().getAddedArtIds(), books);
+        assertEquals(200, response.getStatus());
+        assertEquals(books, response.getPayload().getData().getAddedArtIds());
 
     }
 

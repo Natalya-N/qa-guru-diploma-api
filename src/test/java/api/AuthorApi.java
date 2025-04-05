@@ -29,10 +29,10 @@ public class AuthorApi {
     public void checkAuthorProfile(AuthorResponseModel response,
                                    String name, int followers, int interviews) {
         assertNull(response.getError());
-        assertEquals(response.getStatus(), 200);
-        assertEquals(response.getPayload().getData().getFullName(), name);
-        assertEquals(response.getPayload().getData().getTotalFollowers(), followers);
-        assertEquals(response.getPayload().getData().getInterviewsCount(), interviews);
+        assertEquals( 200, response.getStatus());
+        assertEquals(name, response.getPayload().getData().getFullName());
+        assertEquals(followers, response.getPayload().getData().getTotalFollowers());
+        assertEquals(interviews, response.getPayload().getData().getInterviewsCount());
     }
 
     @Step("Запросить профиль несуществующего автора")
@@ -49,11 +49,11 @@ public class AuthorApi {
 
     @Step("Проверить появление ошибки при запросе несуществующего автора")
     public void checkNonExistedAuthorError(NonExistedAuthorResponseErrorModel response) {
-        assertEquals(response.getError().getType(), "ResourceNotFoundByID");
-        assertEquals(response.getError().getTitle(), "Resource not found");
-        assertEquals(response.getError().getDetail(), "Could not find person with non-existed as an identifier");
-        assertEquals(response.getError().getResourceType(), "person");
-        assertEquals(response.getError().getResourceId(), "non-existed");
+        assertEquals("ResourceNotFoundByID", response.getError().getType());
+        assertEquals("Resource not found", response.getError().getTitle());
+        assertEquals("Could not find person with non-existed as an identifier", response.getError().getDetail());
+        assertEquals("person", response.getError().getResourceType());
+        assertEquals("non-existed", response.getError().getResourceId());
     }
 
 }

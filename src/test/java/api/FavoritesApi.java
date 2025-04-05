@@ -33,7 +33,7 @@ public class FavoritesApi {
 
     @Step("Проверить количество книг в избранном")
     public void checkBooksAmount(int amount, FavoriteBooksResponseModel response) {
-        assertEquals(response.getPayload().getData().size(), amount);
+        assertEquals(amount, response.getPayload().getData().size());
 
     }
 
