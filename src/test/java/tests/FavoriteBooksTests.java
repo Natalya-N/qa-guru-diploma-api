@@ -3,6 +3,7 @@ package tests;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Story;
 import models.favorite.FavoriteBooksResponseModel;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
@@ -10,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Epic("Избранное")
+@Tag("regress")
 public class FavoriteBooksTests extends TestBase{
 
     @Story("Добавление и удаление книг в избранное")
