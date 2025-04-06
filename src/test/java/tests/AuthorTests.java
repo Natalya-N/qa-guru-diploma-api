@@ -11,7 +11,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
 @Epic("Профиль автора")
-//@Tag("regress")
+@Tag("regress")
 public class AuthorTests extends TestBase {
 
     @Story("Получение информации о профиле автора")
