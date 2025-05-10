@@ -1,4 +1,4 @@
-package api;
+package steps;
 
 import io.qameta.allure.Step;
 import models.cart.CartModelRequest;
@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 import static specs.TestSpec.getBaseResponseSpec;
 import static specs.TestSpec.requestSpec;
 
-public class CartApi {
+public class CartApiSteps {
 
     @Step("Добавить книгу в корзину")
     public CartResponseModel addBookToCart(int id) {
@@ -40,20 +40,6 @@ public class CartApi {
         assertEquals(200, response.getStatus());
         assertEquals(books, response.getPayload().getData().getAddedArtIds());
 
-    }
-
-    @Step("Удалить книгу из корзины")
-    public void deleteBookFromCart(int id) {
-        List<Integer> books = new ArrayList<>();
-        books.add(id);
-        CartModelRequest request  = new CartModelRequest();
-        request.setArtIds(books);
-        given(requestSpec)
-                .when()
-                .body(request)
-                .delete(CART_PATH + REMOVE)
-                .then()
-                .spec(getBaseResponseSpec(204));
     }
 
 }

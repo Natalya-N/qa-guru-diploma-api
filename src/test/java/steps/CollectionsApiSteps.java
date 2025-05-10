@@ -1,4 +1,4 @@
-package api;
+package steps;
 
 import io.qameta.allure.Step;
 import models.book.BooksCollectionsResponseModel;
@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 import static specs.TestSpec.getBaseResponseSpec;
 import static specs.TestSpec.requestSpec;
 
-public class CollectionsApi {
+public class CollectionsApiSteps {
 
     @Step("Получить коллекцию книг")
     public BooksCollectionsResponseModel getBooksCollections(int limit, int offset) {

@@ -1,4 +1,4 @@
-package api;
+package steps;
 
 import io.qameta.allure.Step;
 import models.favorite.FavoriteBooksResponseModel;
@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static specs.TestSpec.getBaseResponseSpec;
 import static specs.TestSpec.requestSpec;
 
-public class FavoritesApi {
+public class FavoritesApiSteps {
 
     @Step("Получить список избранных книг")
     public FavoriteBooksResponseModel getFavoriteBooks(int limit) {
